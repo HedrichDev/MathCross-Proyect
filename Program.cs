@@ -1,19 +1,19 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+using MathCross.Models;
+using MathCross.Utils;
 
-class Program
+namespace MathCross
 {
-    static void Main()
+    class Program
     {
-        Console.Write("Ingrese un número ñuelamadre: ");
-        int numero = int.Parse(Console.ReadLine());
+        private static GameState gameState;
+        private static Player player;
+        private static bool isRunning = true;
 
-        if (numero % 2 == 0)
+        static void Main(string[] args)
         {
-            Console.WriteLine("El número es par.");
-        }
-        else
-        {
-            Console.WriteLine("El número es impar.");
-        }
-    }
-}
+            Console.Title = "Math Cross Puzzle Game";
